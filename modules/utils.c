@@ -581,16 +581,3 @@ void utilWriteToFile(Graph graph, FILE *outputFile) {
         if (!current->visited)
             fprintf(outputFile, "%s\n", current->id);
 }
-
-void utilPrint(Graph graph) {
-    GraphNode node = graph->nodes;
-    while (node != NULL) {
-        printf("Node: %s\n", node->id);
-        GraphEdge edge = node->outgoingEdges;
-        while (edge != NULL) {
-            printf("  To: %s, Amount: %f, Date: %s\n", edge->to->id, edge->amount, edge->date);
-            edge = edge->nextOutgoing;
-        }
-        node = node->next;
-    }
-}

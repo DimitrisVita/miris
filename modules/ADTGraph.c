@@ -171,24 +171,3 @@ void freeGraph(Graph graph) {
     }
     myFree(graph, sizeof(struct graph));    // Free the graph
 }
-
-// Print graph
-void printGraph(Graph graph) {
-    GraphNode node = graph->nodes;
-    while (node != NULL) {
-        printf("Node: %s\n", node->id);
-        printf("  Incoming edges:\n");
-        GraphEdge edge = node->incomingEdges;
-        while (edge != NULL) {
-            printf("    From: %s, Amount: %f, Date: %s\n", edge->from->id, edge->amount, edge->date);
-            edge = edge->nextIncoming;
-        }
-        printf("  Outgoing edges:\n");
-        edge = node->outgoingEdges;
-        while (edge != NULL) {
-            printf("    To: %s, Amount: %f, Date: %s\n", edge->to->id, edge->amount, edge->date);
-            edge = edge->nextOutgoing;
-        }
-        node = node->next;
-    }
-}

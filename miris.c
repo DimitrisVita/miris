@@ -1,6 +1,6 @@
 #include "utils.h"
 
-#define MAX_NODES 900
+#define MAX_NODES 1001
 
 int main(int argc, char *argv[]) {
     //////////////////////////////////////
@@ -59,8 +59,6 @@ int main(int argc, char *argv[]) {
     // --- COMMAND LINE PROCESSING --- ///
     //////////////////////////////////////
 
-    utilPrint(graph);
-
     printf(">> ");
     while (fgets(line, sizeof(line), stdin)) {
         line[strlen(line)-1] = '\0';   // remove the newline character
@@ -97,8 +95,6 @@ int main(int argc, char *argv[]) {
         else
             printf("Unrecognized command\n");
 
-        // Print the GRAPH
-        utilPrint(graph);
 
         printf(">> ");
     }
