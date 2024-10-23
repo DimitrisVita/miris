@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "vector": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "ranges": "c",
+        "utility": "c",
+        "memory": "c",
+        "optional": "c",
+        "string": "c",
+        "system_error": "c",
+        "graph.h": "c",
+        "stdio.h": "c",
+        "*.tcc": "c",
+        "cstdlib": "c",
+        "new": "c",
+        "myallocation.h": "c"
+    }
+}
